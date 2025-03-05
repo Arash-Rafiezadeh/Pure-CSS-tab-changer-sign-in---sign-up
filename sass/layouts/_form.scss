@@ -1,0 +1,136 @@
+.form {
+  padding: 3rem;
+
+  &__group {
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    display: block;
+    padding: 1rem 2rem;
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 3px;
+    width: 100%;
+
+    color: $color-primary;
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid $color-primary;
+
+      &:invalid {
+        border-bottom: 3px solid $color-alert;
+      }
+    }
+
+    &:focus &::-webkit-input-placeholder {
+      color: rgba($color-primary, 0.6);
+      font-size: 1.5rem;
+    }
+  }
+
+  &__label {
+    color: $color-primary;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.6s;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  &__radio-group {
+    width: 49%;
+    display: inline-block;
+    position: relative;
+  }
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-label {
+    font-size: 1.4rem;
+    color: $color-primary;
+    cursor: pointer;
+    padding-left: 4rem;
+  }
+
+  &__radio-button {
+    height: 2rem;
+    width: 2rem;
+    border: 3px solid $color-primary;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: -0.1rem;
+    left: 1.5rem;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 1rem;
+      width: 1rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-primary;
+      opacity: 0;
+      transition: all 0.2s;
+    }
+  }
+
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.radio {
+  font-size: 2rem;
+  color: #333;
+  display: flex;
+  gap: 1rem;
+
+  &__group {
+    width: 100%;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__input:checked ~ &__label {
+    color: $color-primary;
+  }
+
+  &__input:checked + form {
+    display: block !important;
+  }
+
+  &__input:not(:checked) + form {
+    display: none !important;
+  }
+}
+
+.form {
+  width: 200%;
+}
+
+.form-2 {
+  transform: translateX(-50%);
+}

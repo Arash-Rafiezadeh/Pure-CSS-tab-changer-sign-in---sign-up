@@ -1,0 +1,10 @@
+.container {
+  width: 60%;
+  height: 60rem;
+  max-width: 80rem;
+  min-width: 40rem;
+  background-color: rgba($color-white, 0.8);
+  @include center;
+  border-radius: 0.5rem;
+  padding: 3rem;
+}

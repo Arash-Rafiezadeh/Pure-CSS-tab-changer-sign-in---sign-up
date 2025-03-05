@@ -7,6 +7,89 @@
     <title>Pure CSS tab change</title>
   </head>
   <body>
-    Hello world !
+    <div class="container">
+      <div class="radio u-margin-bottom-md">
+        <div class="radio__group">
+          <label for="sign-in" class="radio__label">Sign in</label>
+          <input
+            type="radio"
+            name="tab"
+            id="sign-in"
+            class="radio__input radio__input-1"
+            checked
+          />
+
+          <form action="#" class="form u-margin-bottom-md">
+            <div class="form__group">
+              <input
+                type="email"
+                placeholder="Email address"
+                class="form__input"
+                id="email"
+              />
+              <label for="email" class="form__label">Email Address</label>
+            </div>
+            <div class="form__group">
+              <input
+                type="password"
+                placeholder="Password"
+                class="form__input"
+                id="password"
+              />
+              <label for="password" class="form__label">Password</label>
+            </div>
+            <div class="form__group">
+              <button class="btn btn--blue-dark"><snap> Sign in</snap></button>
+            </div>
+          </form>
+        </div>
+
+        <div class="radio__group">
+          <label for="sign-up" class="radio__label">Sign up</label>
+          <input
+            type="radio"
+            name="tab"
+            id="sign-up"
+            class="radio__input radio__input-2"
+          />
+
+          <form action="#" class="form form-2">
+            <div class="form__group">
+              <input
+                type="text"
+                placeholder="Full name"
+                class="form__input"
+                name="s-name"
+                id="s-name"
+              />
+              <label for="s-name" class="form__label">Full name</label>
+            </div>
+            <div class="form__group">
+              <input
+                type="email"
+                placeholder="Email address"
+                class="form__input"
+                name="s-email"
+                id="s-email"
+              />
+              <label for="s-email" class="form__label">Email address</label>
+            </div>
+            <div class="form__group">
+              <input
+                type="password"
+                placeholder="Password"
+                class="form__input"
+                name="s-password"
+                id="s-password"
+              />
+              <label for="s-password" class="form__label">Password</label>
+            </div>
+            <div class="form__group">
+              <button class="btn btn--blue-dark"><snap> Sign up</snap></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
