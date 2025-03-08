@@ -10,7 +10,6 @@
     <div class="container">
       <div class="radio u-margin-bottom-md">
         <div class="radio__group">
-          <label for="sign-in" class="radio__label">Sign in</label>
           <input
             type="radio"
             name="tab"
@@ -18,8 +17,8 @@
             class="radio__input radio__input-1"
             checked
           />
-
-          <form action="#" class="form u-margin-bottom-md">
+          <label for="sign-in" class="radio__label">Sign in</label>
+          <form action="#" class="form">
             <div class="form__group">
               <input
                 type="email"
@@ -45,14 +44,13 @@
         </div>
 
         <div class="radio__group">
-          <label for="sign-up" class="radio__label">Sign up</label>
           <input
             type="radio"
             name="tab"
             id="sign-up"
             class="radio__input radio__input-2"
           />
-
+          <label for="sign-up" class="radio__label">Sign up</label>
           <form action="#" class="form form-2">
             <div class="form__group">
               <input
@@ -63,6 +61,16 @@
                 id="s-name"
               />
               <label for="s-name" class="form__label">Full name</label>
+            </div>
+            <div class="form__group">
+              <input
+                type="tel"
+                placeholder="phone number"
+                class="form__input"
+                name="s-tel"
+                id="s-tel"
+              />
+              <label for="s-tel" class="form__label">Phone number</label>
             </div>
             <div class="form__group">
               <input

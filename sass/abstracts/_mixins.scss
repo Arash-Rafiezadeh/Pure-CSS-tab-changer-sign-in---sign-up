@@ -1,6 +1,18 @@
-@mixin center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@mixin respond($break-point) {
+  @if $break-point == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $break-point == phone {
+    @media (max-width: 40.6em) {
+      @content;
+    }
+  }
+
+  @if $break-point == old-phone {
+    @media (max-width: 28em) {
+      @content;
+    }
+  }
 }

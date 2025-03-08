@@ -64,7 +64,14 @@ body {
 }
 
 .form {
-  padding: 3rem;
+  padding: 3rem 3rem 0 3rem;
+  width: 200%;
+}
+@media (max-width: 40.6em) {
+  .form {
+    padding: 0;
+    padding-top: 3rem;
+  }
 }
 .form__group {
   margin-bottom: 1rem;
@@ -119,6 +126,11 @@ body {
   cursor: pointer;
   padding-left: 4rem;
 }
+@media (max-width: 28em) {
+  .form__radio-label {
+    padding-left: 2rem;
+  }
+}
 .form__radio-button {
   height: 2rem;
   width: 2rem;
@@ -128,23 +140,6 @@ body {
   position: absolute;
   top: -0.1rem;
   left: 1.5rem;
-}
-.form__radio-button::after {
-  content: "";
-  display: block;
-  height: 1rem;
-  width: 1rem;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #487197;
-  opacity: 0;
-  transition: all 0.2s;
-}
-.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
-  opacity: 1;
 }
 .form__button {
   display: flex;
@@ -163,36 +158,83 @@ body {
 .radio__input {
   display: none;
 }
-.radio__input:checked ~ .radio__label {
+.radio__label {
+  margin-left: 12rem;
   color: #487197;
+  padding: 1rem 3rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
-.radio__input:checked + form {
+@media (max-width: 56.25em) {
+  .radio__label {
+    margin-left: 7rem;
+  }
+}
+@media (max-width: 40.6em) {
+  .radio__label {
+    margin-left: 1.5rem;
+  }
+}
+@media (max-width: 28em) {
+  .radio__label {
+    padding: 1rem;
+  }
+}
+.radio__input:checked + .radio__label {
+  background-color: rgba(72, 113, 151, 0.5) !important;
+  color: #fff;
+}
+.radio__input:checked ~ form {
   display: block !important;
 }
-.radio__input:not(:checked) + form {
+.radio__input:not(:checked) ~ form {
   display: none !important;
 }
 
-.form {
-  width: 200%;
-}
-
 .form-2 {
-  transform: translateX(-50%);
+  transform: translateX(-37.5rem);
+}
+@media (max-width: 56.25em) {
+  .form-2 {
+    transform: translateX(-27.5rem);
+  }
+}
+@media (max-width: 40.6em) {
+  .form-2 {
+    transform: translateX(-17.5rem);
+  }
+}
+@media (max-width: 28em) {
+  .form-2 {
+    transform: translateX(-12.5rem);
+  }
 }
 
 .container {
-  width: 60%;
-  height: 60rem;
-  max-width: 80rem;
-  min-width: 40rem;
+  width: 80rem;
   background-color: rgba(255, 255, 255, 0.8);
   position: absolute;
-  top: 50%;
+  top: 15vh;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   border-radius: 0.5rem;
   padding: 3rem;
+  padding-bottom: 0;
+}
+@media (max-width: 56.25em) {
+  .container {
+    width: 60rem;
+  }
+}
+@media (max-width: 40.6em) {
+  .container {
+    width: 40rem;
+  }
+}
+@media (max-width: 28em) {
+  .container {
+    width: 30rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
